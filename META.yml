@@ -1,0 +1,25 @@
+---
+name: Net-Address-IP-Local
+version: v0.1
+author:
+  - 'Julian Mehnle <julian@mehnle.net>'
+abstract: A class for discovering the local system's IP address
+license: perl
+resources:
+  license: http://dev.perl.org/licenses/
+requires:
+  Error: 0
+  IO::Socket::INET: 0
+  perl: 0
+recommends:
+  IO::Socket::INET6: 0
+provides:
+  Net::Address::IP::Local:
+    file: lib/Net/Address/IP/Local.pm
+    version: v0.1
+  Net::Address::IP::Local::Error:
+    file: lib/Net/Address/IP/Local.pm
+generated_by: Module::Build version 0.2808
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2

@@ -1,0 +1,38 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.55.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 7e30ce8d01d6901daed2855ab1482add012a14a2 Build.PL
+SHA1 04d7284b99f8c44f3d73d7cae64b77c372410f3a CHANGES
+SHA1 bae3ea366567d029a4d3ca2546c198f49e978200 INSTALL
+SHA1 faa6fd0178607c0b578534e979e972687312e890 LICENSE
+SHA1 5bc9da45bbc9c4ba3d1ed60c993d90a9e5f80c0b MANIFEST
+SHA1 d6c37ce3379b25c974947b080a57d846b5f7fd18 META.yml
+SHA1 cd14ada78fb37a0d926edd86eddcdf7f939de582 Makefile.PL
+SHA1 0f6fff3120e8177be198cfc9acd3d5282169f7ac README
+SHA1 73e12ca87ccfc31c281e65866a10809fd01e086f TODO
+SHA1 c5011e63949dd404d368e9cc5aa4d0f85c8d1fa3 debian/changelog
+SHA1 5d9474c0309b7ca09a182d888f73b37a8fe1362c debian/compat
+SHA1 15013ee071fdd839e894ca64a028ad3d0d5be1f6 debian/control
+SHA1 0a027b33fba95380a7c5f933487339325aafe48c debian/copyright
+SHA1 6cb5d44aed045d2d77fbe689ba89181faa2f2f0b debian/rules
+SHA1 8385c6e46504f87eb34417d5e7a7d17c59fa679c lib/Net/Address/IP/Local.pm
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.6 (GNU/Linux)
+
+iD8DBQFH3Ix2wL7PKlBZWjsRAku/AKDkpPSRingI7YdrNjEqXkhGtcOp+QCgrzdb
+h22XnEKQnRV9ACxGi3zngUA=
+=HRx7
+-----END PGP SIGNATURE-----

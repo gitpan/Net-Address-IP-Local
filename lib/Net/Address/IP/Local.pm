@@ -3,7 +3,7 @@
 # a class for discovering the local system's IP address.
 #
 # (C) 2005-2008 Julian Mehnle <julian@mehnle.net>
-# $Id: Local.pm 19 2008-03-16 02:37:14Z julian $
+# $Id: Local.pm 23 2008-03-17 19:55:50Z julian $
 #
 ###############################################################################
 
@@ -17,11 +17,11 @@ package Net::Address::IP::Local;
 
 =head1 VERSION
 
-0.1
+0.1.1
 
 =cut
 
-use version; our $VERSION = qv('0.1');
+use version; our $VERSION = qv('0.1.1');
 
 use warnings;
 use strict;
@@ -80,7 +80,7 @@ thrown.
 sub public {
     my ($class) = @_;
     
-    return $class->connected_to(remote_address_ipv4_default)
+    return $class->connected_to($class->remote_address_ipv4_default)
         if not $class->ipv6_support;
         # Short-cut for the common case with no IPv6 support.
     
@@ -114,6 +114,8 @@ I<Net::Address::IP::Local::Error> exception is thrown.
 
 sub public_ipv4 {
     my ($class) = @_;
+    $class->ipv4_support
+        or throw Net::Address::IP::Local::Error("IPv4 not supported");
     return $class->connected_to($class->remote_address_ipv4_default);
 }
 
@@ -127,6 +129,8 @@ I<Net::Address::IP::Local::Error> exception is thrown.
 
 sub public_ipv6 {
     my ($class) = @_;
+    $class->ipv6_support
+        or throw Net::Address::IP::Local::Error("IPv6 not supported");
     return $class->connected_to($class->remote_address_ipv6_default);
 }
 
@@ -142,12 +146,21 @@ remote IP address, a I<Net::Address::IP::Local::Error> exception is thrown.
 sub connected_to {
     my ($class, $remote_address) = @_;
     
-    my $socket_class = $class->ipv6_support ? 'IO::Socket::INET6' : 'IO::Socket::INET';
+    my $socket_class;
+    if ($class->ipv6_support) {
+        $socket_class = 'IO::Socket::INET6';
+    }
+    elsif ($class->ipv4_support) {
+        $socket_class = 'IO::Socket::INET';
+    }
+    else {
+        throw Net::Address::IP::Local::Error("Neither IPv4 nor IPv6 supported");
+    }
     
     my $socket = $socket_class->new(
         Proto       => 'udp',
         PeerAddr    => $remote_address,
-        PeerPort    => remote_port_default
+        PeerPort    => $class->remote_port_default
     );
     
     defined($socket)
@@ -185,7 +198,7 @@ sub ipv6_support {
 =head1 AVAILABILITY and SUPPORT
 
 The latest version of Net::Address::IP::Local is available on CPAN and at
-L<http://www.mehnle.net/software/net-address-ip-local>.
+L<http://www.mehnle.net/software/net-address-ip-local-perl>.
 
 Support is usually (but not guaranteed to be) given by the author, Julian
 Mehnle <julian@mehnle.net>.

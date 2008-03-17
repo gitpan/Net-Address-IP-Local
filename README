@@ -1,7 +1,7 @@
-Net::Address::IP::Local 0.1
+Net::Address::IP::Local 0.1.1
 A class for discovering the local system's IP address.
 (C) 2005-2008 Julian Mehnle <julian@mehnle.net>
-<http://www.mehnle.net/software/net-address-ip-local>
+<http://www.mehnle.net/software/net-address-ip-local-perl>
 ===============================================================================
 
 Net::Address::IP::Local discovers the local system's IP address that would be
@@ -24,5 +24,5 @@ Net::Address::IP::Local is free software.  You may use, modify, and distribute
 it under the same terms as Perl itself, i.e. under the GNU GPL (version 2 or
 later) or the Artistic License.  See LICENSE for the license texts.
 
-# $Id: README 19 2008-03-16 02:37:14Z julian $
+# $Id: README 23 2008-03-17 19:55:50Z julian $
 # vim:tw=79

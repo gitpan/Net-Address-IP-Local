@@ -1,6 +1,6 @@
 ---
 name: Net-Address-IP-Local
-version: v0.1
+version: 0.1.1
 author:
   - 'Julian Mehnle <julian@mehnle.net>'
 abstract: A class for discovering the local system's IP address
@@ -16,7 +16,7 @@ recommends:
 provides:
   Net::Address::IP::Local:
     file: lib/Net/Address/IP/Local.pm
-    version: v0.1
+    version: 0.1.1
   Net::Address::IP::Local::Error:
     file: lib/Net/Address/IP/Local.pm
 generated_by: Module::Build version 0.2808

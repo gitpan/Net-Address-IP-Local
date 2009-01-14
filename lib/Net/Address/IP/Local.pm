@@ -2,8 +2,8 @@
 # Net::Address::IP::Local class,
 # a class for discovering the local system's IP address.
 #
-# (C) 2005-2008 Julian Mehnle <julian@mehnle.net>
-# $Id: Local.pm 23 2008-03-17 19:55:50Z julian $
+# (C) 2005-2009 Julian Mehnle <julian@mehnle.net>
+# $Id: Local.pm 24 2009-01-14 21:23:40Z julian $
 #
 ###############################################################################
 
@@ -17,11 +17,11 @@ package Net::Address::IP::Local;
 
 =head1 VERSION
 
-0.1.1
+0.1.2
 
 =cut
 
-use version; our $VERSION = qv('0.1.1');
+use version; our $VERSION = qv('0.1.2');
 
 use warnings;
 use strict;
@@ -205,7 +205,7 @@ Mehnle <julian@mehnle.net>.
 
 =head1 AUTHOR and LICENSE
 
-Net::Address::IP::Local is Copyright (C) 2005-2008 Julian Mehnle
+Net::Address::IP::Local is Copyright (C) 2005-2009 Julian Mehnle
 <julian@mehnle.net>.
 
 Net::Address::IP::Local is free software.  You may use, modify, and distribute

@@ -1,3 +1,9 @@
+net-address-ip-local-perl (0.1.2) unstable; urgency=low
+
+  * Declare non-Debian dependency on version.pm.
+
+ -- Julian Mehnle <julian@mehnle.net>  Wed, 14 Jan 2009 21:16:13 +0000
+
 net-address-ip-local-perl (0.1.1) unstable; urgency=low
 
   * On IPv4-only systems, ensure that IO::Socket::INET is loaded properly by

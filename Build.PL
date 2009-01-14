@@ -1,8 +1,8 @@
 #
 # Module::Build build script for Net::Address::IP::Local
 #
-# (C) 2005-2008 Julian Mehnle <julian@mehnle.net>
-# $Id: Build.PL 19 2008-03-16 02:37:14Z julian $
+# (C) 2005-2009 Julian Mehnle <julian@mehnle.net>
+# $Id: Build.PL 24 2009-01-14 21:23:40Z julian $
 #
 ###############################################################################
 
@@ -14,6 +14,7 @@ my $build = Module::Build->new(
     license         => 'perl',
     requires        => {
         perl                => 0,
+        version             => 0,
         Error               => 0,
         IO::Socket::INET    => 0
     },

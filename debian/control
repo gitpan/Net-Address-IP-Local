@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Julian Mehnle <julian@mehnle.net>
 Build-Depends: debhelper (>= 5)
 Build-Depends-Indep: perl, libmodule-build-perl, libtest-simple-perl
-Standards-Version: 3.7.3
+Standards-Version: 3.8.0
 
 Package: libnet-address-ip-local-perl
 Architecture: all
